@@ -19,7 +19,7 @@ if [[ $ZSH_PLUGIN_autosuggestions == ON ]]; then
 fi
 if [[ $ZSH_PLUGIN_powerlevel10k == ON ]]; then
     source $LAZY_ZSH/plugins/powerlevel10k/powerlevel10k.zsh-theme
-    source $LAZY_ZSH/p10k_theme.zsh
+    source $LAZY_ZSH/plugins/powerlevel10k/config/p10k-pure.zsh
 fi
 
 # ~/.zsh_history
@@ -35,7 +35,7 @@ fi
 if [ -f $LAZY_ZSH/alias.zsh ]; then
     source $LAZY_ZSH/alias.zsh
 fi
-
+unset $LAZY_ZSH
 function setproxy() {
     local port=${1:-7890} # 更改端口为您的代理软件监听端口, 默认7890
     local host=${2:-127.0.0.1} # 更改IP为您的代理软件监听IP, 默认127.0.0.1
